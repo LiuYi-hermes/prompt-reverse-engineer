@@ -98,7 +98,6 @@ prompt-reverse-engineer/
 ## Credits
 
 - Parameter system inspired by professional photography and AI image generation best practices
-- Reference cases analyzed from EvoLinkAI/awesome-gpt-image-2-API-and-Prompts
 
 ## License
 
