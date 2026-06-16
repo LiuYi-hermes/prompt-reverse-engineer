@@ -17,7 +17,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-DEFAULT_OUTPUT_DIR = Path.home() / ".qclaw" / "workspace-ovm3flwyqkw67jn6" / "prompts"
+DEFAULT_OUTPUT_DIR = Path.home() / "Desktop" / "图片反推"
 
 PARAM_BLOCKS = {
     "A": "画面框架",
@@ -43,7 +43,7 @@ def save_result(image_ref, platform, prompt_text, params, output_dir):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    filename = f"{format_filename()}.md"
+    filename = f"{format_filename()}.txt"
     filepath = output_dir / filename
 
     # Build markdown content
@@ -99,7 +99,7 @@ def search_results(keyword, output_dir):
         return []
 
     results = []
-    for f in sorted(output_dir.glob("反推结果_*.md"), reverse=True):
+    for f in sorted(output_dir.glob("反推结果_*.txt"), reverse=True):
         try:
             text = f.read_text(encoding="utf-8")
         except Exception:
